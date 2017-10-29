@@ -1,0 +1,37 @@
+2017-10-29 08:54:46,819 [7] DEBUG RedArbor.Controllers.EmployeeController - Model not valid in Put
+2017-10-29 08:55:14,165 [9] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 19
+2017-10-29 08:56:03,956 [7] DEBUG RedArbor.Controllers.EmployeeController - Id != employeeId on put
+2017-10-29 08:56:12,845 [7] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 19
+2017-10-29 08:56:27,951 [7] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 19
+2017-10-29 08:56:52,100 [18] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 19
+2017-10-29 12:44:19,395 [12] DEBUG RedArbor.Dao.EmployeeDao - FindById: select * from Employees where Id=@Id ID: 8005
+2017-10-29 12:44:27,908 [8] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 1
+2017-10-29 12:44:51,630 [10] DEBUG RedArbor.Controllers.EmployeeController - Id != employeeId on put
+2017-10-29 12:45:09,746 [11] DEBUG RedArbor.Controllers.EmployeeController - Id != employeeId on put
+2017-10-29 12:45:20,450 [8] DEBUG RedArbor.Dao.EmployeeDao - FindById: select * from Employees where Id=@Id ID: 8005
+2017-10-29 12:45:28,732 [8] DEBUG RedArbor.Dao.EmployeeDao - FindById: select * from Employees where Id=@Id ID: 8005
+2017-10-29 12:45:41,765 [8] DEBUG RedArbor.Dao.EmployeeDao - FindById: select * from Employees where Id=@Id ID: 8005
+2017-10-29 12:45:50,396 [8] DEBUG RedArbor.Dao.EmployeeDao - FindById: select * from Employees where Id=@Id ID: 8005
+2017-10-29 12:45:55,981 [12] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 0
+2017-10-29 12:48:41,622 [21] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 1
+2017-10-29 12:49:50,483 [21] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 1
+2017-10-29 12:57:30,159 [7] ERROR RedArbor.Controllers.EmployeeController - Error on FindAll System.Data.SqlClient.SqlException (0x80131904): Cannot open database "RedArbor" requested by the login. The login failed.
+Login failed for user 'I7\IVAN'.
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en RedArbor.Dao.EmployeeDao.FindAll() en C:\Users\IVAN\OneDrive\PuntoNet\Projects\RedArbor\RedArbor\Dao\EmployeeDao.cs:línea 67
+   en RedArbor.Controllers.EmployeeController.Get() en C:\Users\IVAN\OneDrive\PuntoNet\Projects\RedArbor\RedArbor\Controllers\EmployeeController.cs:línea 33
+ClientConnectionId:fbe026f6-ec1f-4b54-a16d-db323937787c
+Error Number:4060,State:1,Class:11:
+2017-10-29 13:04:20,597 [7] DEBUG RedArbor.Controllers.EmployeeController - Get employees: 0
